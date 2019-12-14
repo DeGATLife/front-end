@@ -45,7 +45,7 @@ import Menuitem from './../Menuitem/Menuitem'
 	render() {
 		return (
 			<div className='directory-menu'>
-				{this.state.sections.map(({title,imageUrl,id,size})=>(<Menuitem key={id} title={title} imageUrl={imageUrl} size={size}></Menuitem>)) }
+				{this.state.sections.map(({id,...otherSectionsProps})=>(<Menuitem key={id} {...otherSectionsProps}></Menuitem>)) }
 				
 			</div>
 		)
