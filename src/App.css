@@ -24,3 +24,6 @@ body{
 .App-link {
   color: #09d3ac;
 }
+*{
+  box-sizing: border-box;
+}
