@@ -1,1 +1,12 @@
-/* todo: delete file if not needed */
+.sign-up{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    .title{
+        margin: 10px 0px;
+    }
+    .button{
+        display: flex;
+        justify-content: space-between;
+    }
+}
