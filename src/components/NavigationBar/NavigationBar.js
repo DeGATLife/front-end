@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './NavigationBar.scss';
+import {connect} from 'react-redux';
 import {auth} from './../firebase/firebase.util';
 import {ReactComponent as Logo} from './../../assets/crown.svg';
 const NavigationBar = ({currentUser}) => (
+
 	<div className='header'>
 		<Link className='logo-container' to='/'>
             <Logo className='logo'></Logo>
@@ -20,5 +22,7 @@ const NavigationBar = ({currentUser}) => (
 		</div>
 	</div>
 );
-
-export default NavigationBar;
+const mapStateToProps = state =>({
+currentUser: state.user.currentUser
+})
+export default connect(mapStateToProps)(NavigationBar) ;
